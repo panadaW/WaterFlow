@@ -19,7 +19,8 @@ static const UIEdgeInsets MyInsets = {10, 10, 10, 10};
 @interface MyWaterLayout ()
 //保存每一列的最大Y值
 @property(nonatomic,strong)NSMutableArray* MaxColY;
-
+//保存布局属性
+@property(nonatomic,strong)NSMutableArray *attrsArray;
 @end
 @implementation MyWaterLayout
 //懒加载
@@ -29,6 +30,12 @@ static const UIEdgeInsets MyInsets = {10, 10, 10, 10};
     }
     return _MaxColY;
 }
+-(NSMutableArray *)attrsArray {
+    if (_attrsArray == nil) {
+        _attrsArray = [NSMutableArray array];
+    }
+    return _attrsArray;
+}
 //每次布局发生改变是调用
 -(void)prepareLayout {
     [super prepareLayout];
@@ -37,27 +44,48 @@ static const UIEdgeInsets MyInsets = {10, 10, 10, 10};
     for (int i = 0; i < ColTotol; i++) {
         [self.MaxColY addObject:@(0)];
     }
+    [self.attrsArray removeAllObjects];
+    NSInteger count = [self.collectionView numberOfItemsInSection:0];
+    //    给每个元素设置想对应的index
+    for (int i = 0; i < count; i++) {
+        NSIndexPath *indexpath = [NSIndexPath indexPathForItem:i inSection:0];
+        UICollectionViewLayoutAttributes *attrs = [self layoutAttributesForItemAtIndexPath:indexpath];
+        [self.attrsArray addObject:attrs];
+
+
+}
+}
+-(CGSize)collectionViewContentSize {
+    //    遍历MaxColY求每列最大y值
+       CGFloat firstMaxYCol = [self.MaxColY[0] doubleValue];
+       for (int i = 1; i < self.MaxColY.count; i++) {
+        if (firstMaxYCol < [self.MaxColY[i] doubleValue]) {
+            firstMaxYCol = [self.MaxColY[i] doubleValue];
+           
+        }
+    }
+    return CGSizeMake(MyCollectionViewWidth, firstMaxYCol + MyInsets.bottom);
 
 }
 //每个元素的布局属性
 -(NSArray<UICollectionViewLayoutAttributes *> *)layoutAttributesForElementsInRect:(CGRect)rect {
-    NSMutableArray *array = [NSMutableArray array];
-//    总共多少元素
-    NSInteger count = [self.collectionView numberOfItemsInSection:0];
-//    给每个元素设置想对应的index
-    for (int i = 0; i < count; i++) {
-        NSIndexPath *indexpath = [NSIndexPath indexPathForItem:i inSection:0];
-        UICollectionViewLayoutAttributes *attrs = [self layoutAttributesForItemAtIndexPath:indexpath];
-        [array addObject:attrs];
-        
-    }
-    return array;
+//    NSMutableArray *array = [NSMutableArray array];
+////    总共多少元素
+//    NSInteger count = [self.collectionView numberOfItemsInSection:0];
+////    给每个元素设置想对应的index
+//    for (int i = 0; i < count; i++) {
+//        NSIndexPath *indexpath = [NSIndexPath indexPathForItem:i inSection:0];
+//        UICollectionViewLayoutAttributes *attrs = [self layoutAttributesForItemAtIndexPath:indexpath];
+//        [array addObject:attrs];
+//        
+//    }
+    return self.attrsArray;
 
 }
 //设置每个cell的布局属性
 -(UICollectionViewLayoutAttributes *)layoutAttributesForItemAtIndexPath:(NSIndexPath *)indexPath {
     UICollectionViewLayoutAttributes *attrs = [UICollectionViewLayoutAttributes layoutAttributesForCellWithIndexPath:indexPath];
-//    遍历MaxColY求每列最大y值
+//    遍历MaxColY求每列最小y值
 //   最短列的下表及最大y坐标
     CGFloat firstMaxYCol = [self.MaxColY[0] doubleValue];
 //    对应下表
