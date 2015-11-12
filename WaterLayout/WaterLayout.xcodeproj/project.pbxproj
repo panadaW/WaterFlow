@@ -9,12 +9,13 @@
 /* Begin PBXBuildFile section */
 		E6ED98191BF498D900F2DC79 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E6ED98181BF498D900F2DC79 /* main.m */; };
 		E6ED981C1BF498D900F2DC79 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E6ED981B1BF498D900F2DC79 /* AppDelegate.m */; };
-		E6ED981F1BF498D900F2DC79 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E6ED981E1BF498D900F2DC79 /* ViewController.m */; };
 		E6ED98221BF498D900F2DC79 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E6ED98201BF498D900F2DC79 /* Main.storyboard */; };
 		E6ED98241BF498D900F2DC79 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E6ED98231BF498D900F2DC79 /* Assets.xcassets */; };
 		E6ED98271BF498D900F2DC79 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E6ED98251BF498D900F2DC79 /* LaunchScreen.storyboard */; };
 		E6ED98321BF498D900F2DC79 /* WaterLayoutTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E6ED98311BF498D900F2DC79 /* WaterLayoutTests.m */; };
 		E6ED983D1BF498D900F2DC79 /* WaterLayoutUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = E6ED983C1BF498D900F2DC79 /* WaterLayoutUITests.m */; };
+		E6ED984C1BF499BE00F2DC79 /* MyWaterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E6ED984B1BF499BE00F2DC79 /* MyWaterViewController.m */; };
+		E6ED984F1BF49A1F00F2DC79 /* MyWaterLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = E6ED984E1BF49A1F00F2DC79 /* MyWaterLayout.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,8 +40,6 @@
 		E6ED98181BF498D900F2DC79 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E6ED981A1BF498D900F2DC79 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E6ED981B1BF498D900F2DC79 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		E6ED981D1BF498D900F2DC79 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		E6ED981E1BF498D900F2DC79 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		E6ED98211BF498D900F2DC79 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E6ED98231BF498D900F2DC79 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E6ED98261BF498D900F2DC79 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -51,6 +50,10 @@
 		E6ED98381BF498D900F2DC79 /* WaterLayoutUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WaterLayoutUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6ED983C1BF498D900F2DC79 /* WaterLayoutUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WaterLayoutUITests.m; sourceTree = "<group>"; };
 		E6ED983E1BF498D900F2DC79 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E6ED984A1BF499BE00F2DC79 /* MyWaterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyWaterViewController.h; sourceTree = "<group>"; };
+		E6ED984B1BF499BE00F2DC79 /* MyWaterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyWaterViewController.m; sourceTree = "<group>"; };
+		E6ED984D1BF49A1F00F2DC79 /* MyWaterLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyWaterLayout.h; sourceTree = "<group>"; };
+		E6ED984E1BF49A1F00F2DC79 /* MyWaterLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyWaterLayout.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,11 +104,10 @@
 		E6ED98161BF498D900F2DC79 /* WaterLayout */ = {
 			isa = PBXGroup;
 			children = (
-				E6ED981A1BF498D900F2DC79 /* AppDelegate.h */,
-				E6ED981B1BF498D900F2DC79 /* AppDelegate.m */,
-				E6ED981D1BF498D900F2DC79 /* ViewController.h */,
-				E6ED981E1BF498D900F2DC79 /* ViewController.m */,
-				E6ED98201BF498D900F2DC79 /* Main.storyboard */,
+				E6ED984A1BF499BE00F2DC79 /* MyWaterViewController.h */,
+				E6ED984B1BF499BE00F2DC79 /* MyWaterViewController.m */,
+				E6ED984D1BF49A1F00F2DC79 /* MyWaterLayout.h */,
+				E6ED984E1BF49A1F00F2DC79 /* MyWaterLayout.m */,
 				E6ED98231BF498D900F2DC79 /* Assets.xcassets */,
 				E6ED98251BF498D900F2DC79 /* LaunchScreen.storyboard */,
 				E6ED98281BF498D900F2DC79 /* Info.plist */,
@@ -117,6 +119,9 @@
 		E6ED98171BF498D900F2DC79 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				E6ED981A1BF498D900F2DC79 /* AppDelegate.h */,
+				E6ED981B1BF498D900F2DC79 /* AppDelegate.m */,
+				E6ED98201BF498D900F2DC79 /* Main.storyboard */,
 				E6ED98181BF498D900F2DC79 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -202,6 +207,7 @@
 		E6ED980C1BF498D900F2DC79 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = My;
 				LastUpgradeCheck = 0710;
 				ORGANIZATIONNAME = "晨曦的Mac";
 				TargetAttributes = {
@@ -273,7 +279,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E6ED981F1BF498D900F2DC79 /* ViewController.m in Sources */,
+				E6ED984C1BF499BE00F2DC79 /* MyWaterViewController.m in Sources */,
+				E6ED984F1BF49A1F00F2DC79 /* MyWaterLayout.m in Sources */,
 				E6ED981C1BF498D900F2DC79 /* AppDelegate.m in Sources */,
 				E6ED98191BF498D900F2DC79 /* main.m in Sources */,
 			);

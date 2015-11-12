@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  MyWaterViewController.h
 //  WaterLayout
 //
 //  Created by 王明申 on 15/11/12.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface MyWaterViewController : UICollectionViewController
 
 @end
-
