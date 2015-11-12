@@ -69,17 +69,15 @@ static const UIEdgeInsets MyInsets = {10, 10, 10, 10};
 }
 //每个元素的布局属性
 -(NSArray<UICollectionViewLayoutAttributes *> *)layoutAttributesForElementsInRect:(CGRect)rect {
-//    NSMutableArray *array = [NSMutableArray array];
-////    总共多少元素
-//    NSInteger count = [self.collectionView numberOfItemsInSection:0];
-////    给每个元素设置想对应的index
-//    for (int i = 0; i < count; i++) {
-//        NSIndexPath *indexpath = [NSIndexPath indexPathForItem:i inSection:0];
-//        UICollectionViewLayoutAttributes *attrs = [self layoutAttributesForItemAtIndexPath:indexpath];
-//        [array addObject:attrs];
-//        
-//    }
-    return self.attrsArray;
+    NSMutableArray *array = [NSMutableArray array];
+    for (int i = 0; i< self.attrsArray.count; i++) {
+        UICollectionViewLayoutAttributes *atts = self.attrsArray[i];
+        if (CGRectIntersectsRect(rect, atts.frame)) {
+            [array addObject:atts];
+        }
+        
+    }
+    return array;
 
 }
 //设置每个cell的布局属性
