@@ -12,7 +12,7 @@
 #import <MJExtension.h>
 #import "MyCloths.h"
 
-@interface MyWaterViewController ()
+@interface MyWaterViewController ()<MyWaterLayoutDelegate>
 @property(nonatomic,strong)NSMutableArray *clothArray;
 @end
 
@@ -29,8 +29,9 @@ static NSString * const reuseIdentifier = @"WaterCell";
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    self.collectionView.collectionViewLayout = [[MyWaterLayout alloc]init];
+    MyWaterLayout *layout = [[MyWaterLayout alloc]init];
+    layout.deledate = self;
+    self.collectionView.collectionViewLayout = layout;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -54,8 +55,13 @@ static NSString * const reuseIdentifier = @"WaterCell";
     return cell;
 }
 
-#pragma mark <UICollectionViewDelegate>
+#pragma mark <MyWaterLayoutDelegate>
+-(CGFloat)collectionFayout:(MyWaterLayout *)layout heightForRowIndex:(NSIndexPath *)index WidthForSelectCell:(CGFloat)width {
+    MyCloths *cloth = self.clothArray[index.row];
+    return cloth.h * width / cloth.w;
 
+
+}
 
 
 @end

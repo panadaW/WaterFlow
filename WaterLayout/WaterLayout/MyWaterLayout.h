@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-
+@class MyWaterLayout;
+@protocol MyWaterLayoutDelegate <NSObject>
+@required
+-(CGFloat)collectionFayout:(MyWaterLayout *)layout heightForRowIndex:(NSIndexPath *)index WidthForSelectCell:(CGFloat)width;
+@end
 @interface MyWaterLayout : UICollectionViewLayout
-
+@property(nonatomic,weak)id<MyWaterLayoutDelegate> deledate;
 @end

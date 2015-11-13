@@ -97,7 +97,7 @@ static const UIEdgeInsets MyInsets = {10, 10, 10, 10};
     }
     CGFloat totalColYSpace = (ColTotol - 1) * MaxColSpace;
     CGFloat w = (MyCollectionViewWidth - MyInsets.left - MyInsets.right -totalColYSpace) / ColTotol;
-    CGFloat h = 40 + arc4random_uniform(120);
+    CGFloat h = [self.deledate collectionFayout:self heightForRowIndex:indexPath WidthForSelectCell:w];
     CGFloat x = MyInsets.left + index * (w + MaxColSpace);
     CGFloat y = firstMaxYCol + MaxRowSpace;
     attrs.frame = CGRectMake(x, y, w, h);
