@@ -8,15 +8,25 @@
 
 #import "MyWaterViewController.h"
 #import "MyWaterLayout.h"
+#import "MyWaterCell.h"
+#import <MJExtension.h>
+#import "MyCloths.h"
 
 @interface MyWaterViewController ()
-
+@property(nonatomic,strong)NSMutableArray *clothArray;
 @end
 
 @implementation MyWaterViewController
 
 static NSString * const reuseIdentifier = @"WaterCell";
-
+-(NSMutableArray *)clothArray {
+    if (_clothArray == nil) {
+        _clothArray = [NSMutableArray array];
+        NSArray *array = [MyCloths mj_objectArrayWithFilename:@"clothes.plist"];
+        [_clothArray addObjectsFromArray:array];
+    }
+    return _clothArray;
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -34,13 +44,13 @@ static NSString * const reuseIdentifier = @"WaterCell";
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
 
-    return 40;
+    return self.clothArray.count;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
+    MyWaterCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
     
-    cell.backgroundColor = [UIColor redColor];
+    cell.cloths = self.clothArray[indexPath.item];
     return cell;
 }
 

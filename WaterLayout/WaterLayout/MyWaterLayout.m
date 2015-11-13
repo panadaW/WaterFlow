@@ -5,6 +5,7 @@
 //  Created by 王明申 on 15/11/12.
 //  Copyright © 2015年 晨曦的Mac. All rights reserved.
 //
+#import "MyCloths.h"
 
 #import "MyWaterLayout.h"
 #define MyCollectionViewWidth self.collectionView.frame.size.width

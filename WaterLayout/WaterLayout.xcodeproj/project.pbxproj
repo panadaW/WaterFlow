@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E6BD1D0B1BF592B400336D0B /* MyWaterCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E6BD1D0A1BF592B400336D0B /* MyWaterCell.m */; };
+		E6BD1D111BF5977700336D0B /* clothes.plist in Resources */ = {isa = PBXBuildFile; fileRef = E6BD1D101BF5977700336D0B /* clothes.plist */; };
+		E6BD1D141BF597CB00336D0B /* MyCloths.m in Sources */ = {isa = PBXBuildFile; fileRef = E6BD1D131BF597CB00336D0B /* MyCloths.m */; };
 		E6ED98191BF498D900F2DC79 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E6ED98181BF498D900F2DC79 /* main.m */; };
 		E6ED981C1BF498D900F2DC79 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E6ED981B1BF498D900F2DC79 /* AppDelegate.m */; };
 		E6ED98221BF498D900F2DC79 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E6ED98201BF498D900F2DC79 /* Main.storyboard */; };
@@ -40,6 +43,11 @@
 		1D3BCD53C4FAE53D0E6C8170 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		926F4371846E4A11ED10F5C2 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE84B7F6786973B8826D389F /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		E6BD1D091BF592B400336D0B /* MyWaterCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyWaterCell.h; path = ../../MyWaterCell.h; sourceTree = "<group>"; };
+		E6BD1D0A1BF592B400336D0B /* MyWaterCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MyWaterCell.m; path = ../../MyWaterCell.m; sourceTree = "<group>"; };
+		E6BD1D101BF5977700336D0B /* clothes.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = clothes.plist; sourceTree = "<group>"; };
+		E6BD1D121BF597CB00336D0B /* MyCloths.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCloths.h; sourceTree = "<group>"; };
+		E6BD1D131BF597CB00336D0B /* MyCloths.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCloths.m; sourceTree = "<group>"; };
 		E6ED98141BF498D900F2DC79 /* WaterLayout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WaterLayout.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6ED98181BF498D900F2DC79 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E6ED981A1BF498D900F2DC79 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -54,10 +62,10 @@
 		E6ED98381BF498D900F2DC79 /* WaterLayoutUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WaterLayoutUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6ED983C1BF498D900F2DC79 /* WaterLayoutUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WaterLayoutUITests.m; sourceTree = "<group>"; };
 		E6ED983E1BF498D900F2DC79 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E6ED984A1BF499BE00F2DC79 /* MyWaterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyWaterViewController.h; sourceTree = "<group>"; };
-		E6ED984B1BF499BE00F2DC79 /* MyWaterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyWaterViewController.m; sourceTree = "<group>"; };
-		E6ED984D1BF49A1F00F2DC79 /* MyWaterLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyWaterLayout.h; sourceTree = "<group>"; };
-		E6ED984E1BF49A1F00F2DC79 /* MyWaterLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyWaterLayout.m; sourceTree = "<group>"; };
+		E6ED984A1BF499BE00F2DC79 /* MyWaterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyWaterViewController.h; path = ../../MyWaterViewController.h; sourceTree = "<group>"; };
+		E6ED984B1BF499BE00F2DC79 /* MyWaterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MyWaterViewController.m; path = ../../MyWaterViewController.m; sourceTree = "<group>"; };
+		E6ED984D1BF49A1F00F2DC79 /* MyWaterLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyWaterLayout.h; path = ../../MyWaterLayout.h; sourceTree = "<group>"; };
+		E6ED984E1BF49A1F00F2DC79 /* MyWaterLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MyWaterLayout.m; path = ../../MyWaterLayout.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +111,45 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		E6BD1D0C1BF595AA00336D0B /* Class */ = {
+			isa = PBXGroup;
+			children = (
+				E6BD1D0D1BF595AA00336D0B /* Controllers */,
+				E6BD1D0E1BF595AA00336D0B /* Model */,
+				E6BD1D0F1BF595AA00336D0B /* View */,
+			);
+			path = Class;
+			sourceTree = "<group>";
+		};
+		E6BD1D0D1BF595AA00336D0B /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				E6ED984A1BF499BE00F2DC79 /* MyWaterViewController.h */,
+				E6ED984B1BF499BE00F2DC79 /* MyWaterViewController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		E6BD1D0E1BF595AA00336D0B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E6BD1D121BF597CB00336D0B /* MyCloths.h */,
+				E6BD1D131BF597CB00336D0B /* MyCloths.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E6BD1D0F1BF595AA00336D0B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E6ED984D1BF49A1F00F2DC79 /* MyWaterLayout.h */,
+				E6ED984E1BF49A1F00F2DC79 /* MyWaterLayout.m */,
+				E6BD1D091BF592B400336D0B /* MyWaterCell.h */,
+				E6BD1D0A1BF592B400336D0B /* MyWaterCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		E6ED980B1BF498D900F2DC79 = {
 			isa = PBXGroup;
 			children = (
@@ -128,13 +175,7 @@
 		E6ED98161BF498D900F2DC79 /* WaterLayout */ = {
 			isa = PBXGroup;
 			children = (
-				E6ED984A1BF499BE00F2DC79 /* MyWaterViewController.h */,
-				E6ED984B1BF499BE00F2DC79 /* MyWaterViewController.m */,
-				E6ED984D1BF49A1F00F2DC79 /* MyWaterLayout.h */,
-				E6ED984E1BF49A1F00F2DC79 /* MyWaterLayout.m */,
-				E6ED98231BF498D900F2DC79 /* Assets.xcassets */,
-				E6ED98251BF498D900F2DC79 /* LaunchScreen.storyboard */,
-				E6ED98281BF498D900F2DC79 /* Info.plist */,
+				E6BD1D0C1BF595AA00336D0B /* Class */,
 				E6ED98171BF498D900F2DC79 /* Supporting Files */,
 			);
 			path = WaterLayout;
@@ -147,6 +188,10 @@
 				E6ED981B1BF498D900F2DC79 /* AppDelegate.m */,
 				E6ED98201BF498D900F2DC79 /* Main.storyboard */,
 				E6ED98181BF498D900F2DC79 /* main.m */,
+				E6ED98231BF498D900F2DC79 /* Assets.xcassets */,
+				E6ED98251BF498D900F2DC79 /* LaunchScreen.storyboard */,
+				E6ED98281BF498D900F2DC79 /* Info.plist */,
+				E6BD1D101BF5977700336D0B /* clothes.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -279,6 +324,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E6ED98271BF498D900F2DC79 /* LaunchScreen.storyboard in Resources */,
+				E6BD1D111BF5977700336D0B /* clothes.plist in Resources */,
 				E6ED98241BF498D900F2DC79 /* Assets.xcassets in Resources */,
 				E6ED98221BF498D900F2DC79 /* Main.storyboard in Resources */,
 			);
@@ -338,9 +384,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E6BD1D0B1BF592B400336D0B /* MyWaterCell.m in Sources */,
 				E6ED984C1BF499BE00F2DC79 /* MyWaterViewController.m in Sources */,
 				E6ED984F1BF49A1F00F2DC79 /* MyWaterLayout.m in Sources */,
 				E6ED981C1BF498D900F2DC79 /* AppDelegate.m in Sources */,
+				E6BD1D141BF597CB00336D0B /* MyCloths.m in Sources */,
 				E6ED98191BF498D900F2DC79 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

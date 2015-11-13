@@ -19,7 +19,7 @@
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="WaterCell" id="moI-Os-0Gb">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="WaterCell" id="moI-Os-0Gb" customClass="MyWaterCell">
                                 <rect key="frame" x="0.0" y="0.0" width="150" height="300"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -51,6 +51,10 @@
                                     <constraint firstAttribute="bottom" secondItem="Nii-0m-qZb" secondAttribute="bottom" id="fL3-PV-bVx"/>
                                     <constraint firstItem="Nii-0m-qZb" firstAttribute="leading" secondItem="moI-Os-0Gb" secondAttribute="leading" id="wnW-Sl-pfL"/>
                                 </constraints>
+                                <connections>
+                                    <outlet property="imageview" destination="i8u-j2-uFp" id="AIU-Eh-lcz"/>
+                                    <outlet property="priceLable" destination="Nii-0m-qZb" id="uVX-3k-fU5"/>
+                                </connections>
                             </collectionViewCell>
                         </cells>
                         <connections>
